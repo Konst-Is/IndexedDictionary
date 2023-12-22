@@ -120,7 +120,7 @@ key = four, value = 4.0
 if !secondDict.isEmpty {
     for key in secondDict.keysInOrder! {
         print("key = \(key), value = \(secondDict[key]!)")
-        }
+    }
 }
 /*
 key = one, value = 1.0
@@ -132,7 +132,7 @@ key = four, value = 4.0
 if !secondDict.isEmpty {
     for value in secondDict.valuesInOrder! {
         print("value = \(value)")
-        }
+    }
 }
 /*
 value = 1.0
