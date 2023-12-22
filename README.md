@@ -39,8 +39,9 @@ init() //  initializer that creates an empty IndexedDictionary. When calling thi
 init(firstKey: Key, firstValue: Value) // initializer that creates an IndexedDictionary instance with the first
 // "key-value" pair. When calling it, the generic parameters of keys and values types can be omitted explicitly.
 subscript(key: Key) -> Value? // returns an optional value for the key or sets a new value for the given key
-subscript(index: Int) -> (key: Key, value: Value) // returns a key-value pair at the given index or sets a new value
-// at the key that matches the given index. Checking the validity of the index, as in Array, is the responsibility
+subscript(index: Int) -> (key: Key, value: Value) // returns a key-value pair at the given index or sets
+// a new value at the key that matches the given index. Checking the validity of the index, as in Array,
+// is the responsibility
 // of the programmer. If you enter an index outside the range (0..<count) you will get a runtime error.
 add(key: Key, value: Value) // adds a new "key-value" pair to the Dictionary with an index that is 1 greater
 // than the index of the last item.
