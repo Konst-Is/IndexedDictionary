@@ -22,3 +22,8 @@ IndexedDictionary is designed for tasks where you want to preserve the order of 
 - It is not possible to remove an item inside an IndexedDictionary. Only the last item can be removed using the `removeLast()` method. With the `removeAll()` method, you can clear the entire IndexedDictionary.
 - To implement the `getIndexesFor(value:)` method, the type of values stored in the IndexedDictionary must conform to the `Equatable` protocol.
 - To be able to print all "index-key-values" stored in IndexedDictionary, the values type must conform to the `CustomStringConvertible` protocol.
+
+### How to integrate IndexedDictionary into your project
+
+- Open your project in XCode, in the project settings open the Package Dependencies tab, click + , paste the link "https://github.com/Konst-Is/IndexedDictionary.git" into the search box and click "Add Package".
+- In the file where you will use IndexedDictionary, add "import IndexedDictionary".
