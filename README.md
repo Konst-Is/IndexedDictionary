@@ -17,7 +17,7 @@ IndexedDictionary is designed for tasks where you want to preserve the order of 
 ### Limitations
 
 - IndexedDictionary keys can be of any type implementing the `Hashable` protocol.
-- Value values can be of any type, subject to the restrictions below.
+- Values can be of any type, subject to the restrictions below.
 - Adding a new key-value pair is possible only at the end of IndexedDictionary using `add(key: Key, value: Value)` method.
 - It is not possible to remove an item inside an IndexedDictionary. Only the last item can be removed using the `removeLast()` method. With the `removeAll()` method, you can clear the entire IndexedDictionary.
 - To implement the `getIndexesFor(value: Value)` method, the type of values stored in the IndexedDictionary must conform to the `Equatable` protocol.
