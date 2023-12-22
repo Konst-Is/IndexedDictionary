@@ -62,3 +62,87 @@ method the values type must conform to the CustomStringConvertible protocol. */
 
 - Open your project in XCode, in the project settings open the Package Dependencies tab, click + , paste the link "https://github.com/Konst-Is/IndexedDictionary.git" into the search box and click "Add Package".
 - In the file where you will use IndexedDictionary, add "import IndexedDictionary".
+
+### Examples of work
+
+```swift
+import IndexedDictionary
+import Foundation
+
+// Example 1
+
+var firstDict = IndexedDictionary<String, Double>()
+
+firstDict.add(key: "one", value: 1.0)
+firstDict.add(key: "two", value: 2.0)
+firstDict.add(key: "three", value: 3.0)
+print(firstDict.keysInOrder ?? "nil") // ["one", "two", "three"]
+print(firstDict.valuesInOrder ?? "nil") // [1.0, 2.0, 3.0]
+let last = firstDict.removeLast()
+print(last ?? "nil") // (key: "three", value: 3.0)
+print(firstDict[0]) // (key: "one", value: 1.0)
+print(firstDict[1].value) // 2.0
+print (firstDict["two"] ?? "nil") // 2.0
+print(firstDict.count) // 2
+print(firstDict.getIndexFor(key: "two") ?? "nil") // 1
+
+// Example 2
+
+var secondDict = IndexedDictionary(firstKey: "one", firstValue: 1.0)
+secondDict.add(key: "two", value: 2.0)
+secondDict.add(key: "three", value: 3.0)
+secondDict.add(key: "four", value: 4.0)
+secondDict["two"] = 4.0
+print(secondDict.description
+/*
+[index: 0, key: one, value: 1.0
+index: 1, key: two, value: 4.0
+index: 2, key: three, value: 3.0
+index: 3, key: four, value: 4.0]
+*/
+
+if let indexes = secondDict.getIndexesFor(value: 4.0) {
+    print( indexes) // [1, 3]
+}
+print(secondDict[3].key) // four
+
+
+for i in 0..<secondDict.count {
+    print("key = \(secondDict[i].key), value = \(secondDict[i].value)")
+}
+/*
+key = one, value = 1.0
+key = two, value = 4.0
+key = three, value = 3.0
+key = four, value = 4.0
+*/
+
+if !secondDict.isEmpty {
+    for key in secondDict.keysInOrder! {
+        print("key = \(key), value = \(secondDict[key]!)")
+        }
+}
+/*
+key = one, value = 1.0
+key = two, value = 4.0
+key = three, value = 3.0
+key = four, value = 4.0
+*/
+
+if !secondDict.isEmpty {
+    for value in secondDict.valuesInOrder! {
+        print("value = \(value)")
+        }
+}
+/*
+value = 1.0
+value = 4.0
+value = 3.0
+value = 4.0
+*/
+```
+
+
+
+
+  
