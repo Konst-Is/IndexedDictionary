@@ -8,7 +8,7 @@ IndexedDictionary is designed for tasks where you want to preserve the order of 
 ### Advantages of IndexedDictionary
 
 - IndexedDictionary stores a collection of "key-value" pairs in the order in which they are added to the Dictionary. 
-- Iteration through IndexedDictionary always occurs in the same order.
+- Iterating through an IndexedDictionary over the indexes is always in the same order.
 - Access to value by key with O(1) complexity.
 - Accessing a "key-value" by index with O(1) complexity.
 - Adding a new item with O(1) complexity.
