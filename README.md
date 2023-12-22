@@ -50,8 +50,8 @@ that is 1 greater than the index of the last item. */
 removeLast() -> (key: Key, value: Value)? /* method that removes the last "key-value" pair,
 if it exists, and returns its optional value. */
 removeAll() // method that completely clears the Dictionary.
-getIndexForKey(key: Key) -> Int? // method that returns an optional index value on the given key.
-getIndexesForValue(value: Value) -> [Int]? /* method that returns an optional Array of
+getIndexFor(key: Key) -> Int? // method that returns an optional index value on the given key.
+getIndexesFor(value: Value) -> [Int]? /* method that returns an optional Array of
 indices for the given value. To implement this method, the type of values must conform
 to the Equatable protocol. */
 description /* forms a string describing all items in the Dictionary. To implement this
