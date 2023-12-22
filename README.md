@@ -26,7 +26,7 @@ IndexedDictionary is designed for tasks where you want to preserve the order of 
 ### API
 
 ```swift
-// public struct IndexedDictionary<Key, Value> where Key: Hashable
+public struct IndexedDictionary<Key, Value> where Key: Hashable {}
 
 count // number of items in the Dictionary
 isEmpty // returns true if the Dictiobary is empty and false otherwise
