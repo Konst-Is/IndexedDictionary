@@ -44,7 +44,7 @@ for the given key */
 subscript(index: Int) -> (key: Key, value: Value) /* returns a key-value pair at the given
 index or sets a new value at the key that matches the given index. Checking the validity
 of the index, as in Array, is the responsibility of the programmer. If you enter an index
-outside the range (0..<count) you will get a runtime error. */
+outside the range (0..<count) or the Dictionary is empty you will get a runtime error. */
 add(key: Key, value: Value) /* adds a new "key-value" pair to the Dictionary with an index
 that is 1 greater than the index of the last item. */
 removeLast() -> (key: Key, value: Value)? /* method that removes the last "key-value" pair,
