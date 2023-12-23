@@ -93,7 +93,7 @@ secondDict.add(key: "two", value: 2.0)
 secondDict.add(key: "three", value: 3.0)
 secondDict.add(key: "four", value: 4.0)
 secondDict["two"] = 4.0
-print(secondDict.description
+print(secondDict.description)
 /*
 [index: 0, key: one, value: 1.0
 index: 1, key: two, value: 4.0
