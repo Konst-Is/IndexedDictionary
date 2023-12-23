@@ -52,7 +52,7 @@ public struct IndexedDictionary<Key, Value> where Key: Hashable {
     
     public subscript(index: Int) -> (key: Key, value: Value) {
         get {
-            guard (0..<count).contains(index) else { fatalError() }
+            guard !isEmpty, (0..<count).contains(index) else { fatalError() }
             let key = indexesAndKeys[index]!
             return (key, keysAndValues[key]!)
         }
