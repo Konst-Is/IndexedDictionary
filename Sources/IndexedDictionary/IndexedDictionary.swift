@@ -57,7 +57,7 @@ public struct IndexedDictionary<Key, Value> where Key: Hashable {
             return (key, keysAndValues[key]!)
         }
         set {
-            guard (0..<count).contains(index) else { return }
+            guard !isEmpty, (0..<count).contains(index) else { return }
             let key = indexesAndKeys[index]!
             keysAndValues[key] = newValue.value
         }
