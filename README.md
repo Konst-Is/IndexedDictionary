@@ -41,7 +41,7 @@ instance with the first "key-value" pair. When calling it, the generic parameter
 and values types can be omitted explicitly. */
 subscript(key: Key) -> Value? /* returns an optional value for the key or sets a new value
 for the given key */
-subscript(index: Int) -> (key: Key, value: Value) /* returns a key-value pair at the given
+subscript(index: Int) -> (key: Key, value: Value) /* returns a "key-value" pair at the given
 index or sets a new value at the key that matches the given index. Checking the validity
 of the index, as in Array, is the responsibility of the programmer. If you enter an index
 outside the range (0..<count) or the Dictionary is empty you will get a runtime error. */
