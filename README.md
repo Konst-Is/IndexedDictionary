@@ -20,7 +20,7 @@ IndexedDictionary is designed for tasks where you want to preserve the order of 
 - Values can be of any type, subject to the restrictions below.
 - Adding a new key-value pair is possible only at the end of IndexedDictionary using `add(key:, value:)` method.
 - It is not possible to remove an item inside an IndexedDictionary. Only the last item can be removed using the `removeLast()` method. With the `removeAll()` method, you can clear the entire IndexedDictionary.
-- To implement the `getIndexesFor(value:)` method, the type of values stored in the IndexedDictionary must conform to the `Equatable` protocol.
+- To implement the `getIndicesFor(value:)` method, the type of values stored in the IndexedDictionary must conform to the `Equatable` protocol.
 - To be able to print all "index-key-values" stored in IndexedDictionary, the values type must conform to the `CustomStringConvertible` protocol.
 
 ### API
