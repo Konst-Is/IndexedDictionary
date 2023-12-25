@@ -101,7 +101,7 @@ index: 2, key: three, value: 3.0
 index: 3, key: four, value: 4.0]
 */
 
-if let indexes = secondDict.getIndexesFor(value: 4.0) {
+if let indexes = secondDict.getIndicesFor(value: 4.0) {
     print( indexes) // [1, 3]
 }
 print(secondDict[3].key) // four
