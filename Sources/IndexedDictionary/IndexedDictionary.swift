@@ -101,7 +101,7 @@ public struct IndexedDictionary<Key, Value> where Key: Hashable {
 
 public extension IndexedDictionary where Value: Equatable {
     
-    func getIndexesFor(value: Value) -> [Int]? {
+    func getIndicesFor(value: Value) -> [Int]? {
         guard !isEmpty else { return nil }
         var indexes: [Int]? = []
         for i in 0..<count {
